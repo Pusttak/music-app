@@ -7,6 +7,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
@@ -22,8 +23,3 @@ jobs:
         with:
           branch: gh-pages
           folder: build
-    env:
-      REACT_APP_BASE_URL: ${{secrets.REACT_APP_BASE_URL}}
-      REACT_APP_API_KEY: ${{secrets.REACT_APP_API_KEY}}
-      REACT_APP_API_HOST: ${{secrets.REACT_APP_API_HOST}}
-      REACT_APP_IP_URL: ${{secrets.REACT_APP_IP_URL}}
