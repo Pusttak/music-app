@@ -1,0 +1,15 @@
+.card {
+  cursor: pointer;
+}
+
+.coverart {
+  border-radius: 2px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.title {
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}

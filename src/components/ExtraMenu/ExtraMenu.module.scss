@@ -1,0 +1,92 @@
+.menu {
+  position: absolute;
+  top: 0;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  outline: none;
+  width: 290px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #1f1f1f 0%, #0d0d0d 100%);
+  user-select: none;
+  // position: sticky;
+  z-index: 10;
+
+  &.isOpen .menuList {
+    height: 200px;
+  }
+}
+
+.menuTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  height: 48px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  border-bottom: 1px solid #0d0d0d6c;
+  border-radius: 16px;
+  box-shadow: 5px 0px 10px 20px #0d0d0d6c;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: rgba(96, 96, 96, 0.096);
+  }
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  transition: all 0.3s ease;
+  overflow-y: scroll;
+  margin-right: 1px;
+
+  & li:first-child {
+    padding-top: 8px;
+  }
+
+  & li:last-child {
+    padding-bottom: 12px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to bottom,
+      #6f32ff19 0%,
+      #6f32ffab 50%,
+      #6f32ff22 100%
+    );
+    border-radius: 10px;
+    border: none;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      to bottom,
+      #6f32ff19 0%,
+      #6f32ffe6 50%,
+      #6f32ff22 100%
+    );
+  }
+}
+
+.options {
+  transition: all 0.1s ease-in-out;
+  padding: 2px 12px;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    text-shadow: 0px 0px 16px rgba(255, 255, 255, 0.65);
+    background-color: #19191988;
+    background: linear-gradient(to right, #191919a4 0%, #1919194c 100%);
+  }
+}

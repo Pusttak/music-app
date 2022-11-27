@@ -1,0 +1,29 @@
+.menuWrapper {
+  background: linear-gradient(to bottom, #1f1f1f 0%, #0d0d0d 100%);
+  height: 100%;
+  border-radius: 12px;
+}
+
+.menu {
+  position: absolute;
+  left: 25px;
+  right: 25px;
+  top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:not(.disabled):hover {
+    color: white;
+  }
+
+  &.disabled {
+    color: #40404025;
+    cursor: auto;
+  }
+}

@@ -1,0 +1,132 @@
+.sideBarWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: auto;
+}
+
+.titleBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  height: 48px;
+  color: white;
+  margin-bottom: 12px;
+  background: linear-gradient(
+    to right,
+    rgba(111, 50, 255, 0.0823529412) 0%,
+    rgba(111, 50, 255, 0.3254901961) 50%,
+    rgba(111, 50, 255, 0) 100%
+  );
+
+  & svg {
+    display: block;
+  }
+}
+
+.trackData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: auto;
+}
+
+.imageWrapper {
+  width: 130px;
+  height: 130px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.album {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.486);
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.lyricsWrapper {
+  height: 300px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to bottom,
+      #6f32ff19 0%,
+      #6f32ffab 50%,
+      #6f32ff22 100%
+    );
+    border-radius: 10px;
+    border: none;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      to bottom,
+      #6f32ff19 0%,
+      #6f32ffe6 50%,
+      #6f32ff22 100%
+    );
+  }
+}
+
+.lyricsTitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.712);
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.lyrics {
+  padding: 20px 6px 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+
+  &.short {
+    padding-bottom: 72px;
+  }
+
+  background: linear-gradient(
+    to bottom,
+    #131213 55%,
+    white 60%,
+    white 75%,
+    #966ff4 95%,
+    #131213 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-attachment: fixed;
+}
+
+.string {
+  min-height: 16px;
+  margin-bottom: 2px;
+}

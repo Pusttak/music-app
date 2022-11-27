@@ -1,15 +1,78 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #030202;
+  color: #bcb7b5;
+  font-weight: 300;
+  font-size: 14px;
+  scrollbar-gutter: stable;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to right,
+    #6f32ff19 0%,
+    #6f32ffab 50%,
+    #6f32ff22 100%
+  );
+  border-radius: 10px;
+  border: 8px solid #030202;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to right,
+    #6f32ff19 0%,
+    #6f32ffe6 50%,
+    #6f32ff22 100%
+  );
 }

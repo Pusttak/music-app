@@ -1,0 +1,23 @@
+.timeLine {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 4px;
+  width: 500px;
+}
+
+.time {
+  display: flex;
+  width: 30px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff7b;
+}
+
+.currentTime {
+  justify-content: flex-start;
+}
+
+.duration {
+  justify-content: flex-end;
+}

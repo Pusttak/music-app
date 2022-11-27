@@ -1,0 +1,58 @@
+.card {
+  position: relative;
+  cursor: pointer;
+
+  & .link:hover ~ .playIcon,
+  & .playIcon:hover {
+    opacity: 1;
+  }
+}
+
+.coverart {
+  border-radius: 2px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.title {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.playIcon {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  opacity: 0;
+  // color: #6e32ff;
+  background-color: rgba(0, 0, 0, 0.718);
+  border-bottom-left-radius: 4px;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+
+  & svg {
+    display: block;
+  }
+
+  &:hover {
+    color: #6e32ff;
+    background-color: rgba(0, 0, 0, 0.822);
+  }
+}

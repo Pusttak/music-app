@@ -1,0 +1,19 @@
+.app {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+// .mainContent {
+//   height: calc(100vh - 200px);
+// }
+
+.extraMenu {
+  min-width: 280px;
+  background-color: #111;
+}

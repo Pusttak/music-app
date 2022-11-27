@@ -1,0 +1,102 @@
+.listItem {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-radius: 8px;
+  gap: 4px;
+  transition: all 0.1s ease-out;
+
+  &.active {
+    background: linear-gradient(
+      to right,
+      rgba(111, 50, 255, 0.015) 0%,
+      rgba(111, 50, 255, 0.3254901961) 50%,
+      rgba(111, 50, 255, 0) 100%
+    );
+  }
+
+  &.active .playIconBox {
+    display: flex;
+  }
+
+  &.active .trackNumber {
+    display: none;
+  }
+
+  &:hover {
+    background: linear-gradient(
+      to right,
+      rgba(111, 50, 255, 0.015) 0%,
+      rgba(111, 50, 255, 0.3254901961) 50%,
+      rgba(111, 50, 255, 0) 100%
+    );
+  }
+
+  &:hover .trackNumber {
+    display: none;
+  }
+
+  &:hover .playIconBox {
+    display: flex;
+  }
+}
+
+.trackNumber {
+  display: block;
+  min-width: 20px;
+  font-size: 11px;
+  font-weight: 400;
+  padding-left: 2px;
+}
+
+.playIconBox {
+  display: none;
+  align-items: center;
+  justify-content: start;
+  min-width: 20px;
+  font-size: 11px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.imageWrapper {
+  min-width: 40px;
+  min-height: 40px;
+  width: 40px;
+  height: 40px;
+  margin-right: 6px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.trackDataWrapper {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trackName {
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trackArtist {
+  margin-right: 12px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #bcb7b5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.1s ease-out;
+
+  &:hover {
+    color: white;
+  }
+}

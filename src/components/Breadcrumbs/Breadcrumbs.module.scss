@@ -1,0 +1,10 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+  gap: 12px;
+
+  & span {
+    color: white;
+  }
+}

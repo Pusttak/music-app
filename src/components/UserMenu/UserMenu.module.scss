@@ -1,0 +1,75 @@
+.menuWrap {
+  position: relative;
+  cursor: pointer;
+
+  & svg {
+    display: block;
+  }
+}
+
+.modal {
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  height: 450px;
+  transform: translate(-50%, 25%);
+  border-radius: 12px;
+  background-color: #ffffff0f;
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.104);
+  z-index: 999;
+  transition: opacity 0.14s ease-in-out;
+  overflow: hidden;
+
+  &.ishiden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.form {
+  height: 100%;
+
+  & input {
+    height: 40px;
+    padding: 16px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.503);
+    border-radius: 18px;
+
+    &:nth-child(-n + 2) {
+      margin-bottom: 15px;
+    }
+  }
+
+  & button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 150px;
+    height: 35px;
+    padding: 6px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.334);
+    border-radius: 18px;
+    transition: all 0.14s ease-in;
+    background-color: white;
+    color: #030202;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,38 @@
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+
+  & svg {
+    cursor: pointer;
+
+    &.isActive {
+      color: white;
+    }
+  }
+}
+
+.playButtonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #030202;
+  background-color: white;
+  cursor: pointer;
+}
+
+.skipIcon {
+  color: white;
+  padding: 6px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #ffffff2f;
+  }
+}
