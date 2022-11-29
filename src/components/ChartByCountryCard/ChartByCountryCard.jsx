@@ -42,7 +42,7 @@ const ChartByCountryCard = ({ trackList, onPlay }) => {
                 <span className={s.trackNumber}>{idx + 1}</span>
                 <Link to={`/tracks/${trackId}`}>
                   <div className={s.imageWrapper}>
-                    <img src={images.coverart} alt={subtitle} />
+                    <img src={images?.coverart} alt={subtitle} />
                   </div>
                 </Link>
                 <div className={s.trackDataWrapper}>
