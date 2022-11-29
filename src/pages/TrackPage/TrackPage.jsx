@@ -33,13 +33,13 @@ const TrackPage = () => {
 
   const trackIsLIkes = useCallback(
     id => {
-      return likeList.some(track => track.key === id);
+      return likeList.some(track => track?.key === id);
     },
     [likeList]
   );
 
   const hadleClickLikesList = track => {
-    trackIsLIkes(track.key) ? dispatch(removeFromLikesList(track.key)) : dispatch(addToLikesList(track));
+    trackIsLIkes(track?.key) ? dispatch(removeFromLikesList(track?.key)) : dispatch(addToLikesList(track));
   };
 
   const handleButtonPlayClick = trackId => {
@@ -78,8 +78,8 @@ const TrackPage = () => {
             }}
           >
             <div className={s.title}>
-              <span className={s.track}>{data.title}</span>
-              <span className={s.artist}>{data.subtitle}</span>
+              <span className={s.track}>{data?.title}</span>
+              <span className={s.artist}>{data?.subtitle}</span>
             </div>
             <div className={s.buttonsBar}>
               <div className={s.button} onClick={() => handleButtonPlayClick(trackId)}>
@@ -90,11 +90,11 @@ const TrackPage = () => {
                 className={trackIsLIkes(trackId) ? [s.button, s.buttonActive].join(' ') : s.button}
                 onClick={() =>
                   hadleClickLikesList({
-                    key: data.key,
-                    title: data.title,
-                    subtitle: data.subtitle,
-                    images: data.images,
-                    artists: data.artist,
+                    key: data?.key,
+                    title: data?.title,
+                    subtitle: data?.subtitle,
+                    images: data?.images,
+                    artists: data?.artist,
                   })
                 }
               >
@@ -104,14 +104,14 @@ const TrackPage = () => {
             </div>
             <div className={s.artistImg}>
               <div className={s.imgWrapper}>
-                <img src={data.images.background} alt={data.subtitle} />
+                <img src={data?.images?.background} alt={data?.subtitle} />
               </div>
             </div>
           </div>
         </div>
         <div className={s.trackList}></div>
         <Playlist
-          artist={data.subtitle}
+          artist={data?.subtitle}
           onLikesList={hadleClickLikesList}
           onTrackIsLIkes={trackIsLIkes}
           onPlay={handleButtonPlayClick}
